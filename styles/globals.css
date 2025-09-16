@@ -1,7 +1,39 @@
+.animate-zoom-in-out {
+  animation: zoom-in-out 1.2s ease-in-out infinite;
+}
+
+@keyframes zoom-in-out {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.18);
+  }
+}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+
 body {
   @apply bg-gray-50;
+}
+
+@keyframes border-move {
+  0% {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 0 #2563eb;
+  }
+  50% {
+    border-color: #38bdf8;
+    box-shadow: 0 0 16px 2px #38bdf8;
+  }
+  100% {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 0 #2563eb;
+  }
+}
+
+.animate-border-move {
+  animation: border-move 1.2s linear infinite;
 }
